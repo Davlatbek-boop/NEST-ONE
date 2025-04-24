@@ -22,6 +22,12 @@ import { Material } from "./materials/models/material.model";
 import { BuildingEmployee } from "./building-employees/models/building-employee.model";
 import { Building } from "./buildings/models/building.model";
 import { BuildingMaterial } from "./building-materials/models/building-material.model";
+import { RolesModule } from './roles/roles.module';
+import { Rol } from "./roles/models/role.model";
+import { UsersModule } from './users/users.module';
+import { User } from "./users/models/user.model";
+import { UserRol } from "./users/models/user-role.model";
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -44,6 +50,9 @@ import { BuildingMaterial } from "./building-materials/models/building-material.
         BuildingEmployee,
         Building,
         BuildingMaterial,
+        Rol,
+        User,
+        UserRol
       ],
       autoLoadModels: true,
       sync: { alter: true },
@@ -60,6 +69,9 @@ import { BuildingMaterial } from "./building-materials/models/building-material.
     BuildingEmployeesModule,
     MaterialsModule,
     BuildingMaterialsModule,
+    RolesModule,
+    UsersModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],
