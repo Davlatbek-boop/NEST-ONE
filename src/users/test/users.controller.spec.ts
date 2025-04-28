@@ -94,7 +94,7 @@ describe("Users controller testing", () => {
   })
 
   describe("Remove user" , ()=>{
-    describe("when findOne user called", ()=>{
+    describe("when remove user called", ()=>{
         let user: Object 
         beforeAll(async ()=>{
             user = await usersController.remove(String(userStub().id))
