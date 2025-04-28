@@ -1,6 +1,6 @@
 import { BelongsTo, BelongsToMany, Column, DataType, Model, Table } from "sequelize-typescript";
-import { MachineDriver } from "src/machine-driver/models/machine-driver.model";
-import { Machine } from "src/machine/models/machine.model";
+import { MachineDriver } from "../../machine-driver/models/machine-driver.model";
+import { Machine } from "../../machine/models/machine.model";
 
 interface IDriverCreationAttr {
   first_name: string;

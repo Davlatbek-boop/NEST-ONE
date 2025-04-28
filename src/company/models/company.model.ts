@@ -1,7 +1,7 @@
 import { Column, DataType, HasMany, Model, Table } from "sequelize-typescript";
-import { Builder } from "src/builders/models/builder.model";
-import { Employee } from "src/employees/models/employee.model";
-import { Machine } from "src/machine/models/machine.model";
+import { Builder } from "../../builders/models/builder.model";
+import { Employee } from "../../employees/models/employee.model";
+import { Machine } from "../../machine/models/machine.model";
 
 interface CompanyCreationAttr {
   name: string;

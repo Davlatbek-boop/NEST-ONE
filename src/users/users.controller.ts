@@ -6,10 +6,10 @@ import { AddRoleDto } from './dto/add-role.dto';
 import { ActivateUserDto } from './dto/activate-user.dto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { User } from './models/user.model';
-import { JwtAuthGuard } from 'src/common/guards/jwt-auth.guard';
-import { JwtSelfAuthGuard } from 'src/common/guards/jwt-self.guard';
-import { Roles } from 'src/common/decorators/roles-auth.decorator';
-import { RolesGuard } from 'src/common/guards/roles.guard';
+import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
+import { JwtSelfAuthGuard } from '../common/guards/jwt-self.guard';
+import { Roles } from '../common/decorators/roles-auth.decorator';
+import { RolesGuard } from '../common/guards/roles.guard';
 
 
 @ApiTags("Users Foydalanuvchilar")
@@ -34,6 +34,8 @@ export class UsersController {
     description: "List of users",
     type:[User]
   })
+
+  
   @UseGuards(JwtAuthGuard)
   @Get()
   findAll() {

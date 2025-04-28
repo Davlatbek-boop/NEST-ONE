@@ -1,7 +1,7 @@
 import { InjectModel } from "@nestjs/sequelize";
 import { BelongsTo, Column, DataType, ForeignKey, Model, Table } from "sequelize-typescript";
-import { Building } from "src/buildings/models/building.model";
-import { Employee } from "src/employees/models/employee.model";
+import { Building } from "../../buildings/models/building.model";
+import { Employee } from "../../employees/models/employee.model";
 
 
 

@@ -1,6 +1,6 @@
 import { Column, DataType, ForeignKey, Model, Table } from "sequelize-typescript";
 import { User } from "./user.model";
-import { Rol } from "src/roles/models/role.model";
+import { Rol } from "../../roles/models/role.model";
 
 interface IUserRolCreationAttre {
   userId: number;

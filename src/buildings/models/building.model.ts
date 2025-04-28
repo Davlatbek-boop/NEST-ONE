@@ -1,8 +1,8 @@
 import { BelongsToMany, Column, DataType, Model, Table } from "sequelize-typescript";
-import { BuildingEmployee } from "src/building-employees/models/building-employee.model";
-import { BuildingMaterial } from "src/building-materials/models/building-material.model";
-import { Employee } from "src/employees/models/employee.model";
-import { Material } from "src/materials/models/material.model";
+import { BuildingEmployee } from "../../building-employees/models/building-employee.model";
+import { BuildingMaterial } from "../../building-materials/models/building-material.model";
+import { Employee } from "../../employees/models/employee.model";
+import { Material } from "../../materials/models/material.model";
 
 interface IBuildingsCreateAttr {
   name: string;

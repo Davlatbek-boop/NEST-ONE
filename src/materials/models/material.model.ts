@@ -5,8 +5,8 @@ import {
   Model,
   Table,
 } from "sequelize-typescript";
-import { BuildingMaterial } from "src/building-materials/models/building-material.model";
-import { Building } from "src/buildings/models/building.model";
+import { BuildingMaterial } from "../../building-materials/models/building-material.model";
+import { Building } from "../../buildings/models/building.model";
 
 interface IMaterialCreateAttr {
   name: string;

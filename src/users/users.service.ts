@@ -3,8 +3,8 @@ import { CreateUserDto } from "./dto/create-user.dto";
 import { UpdateUserDto } from "./dto/update-user.dto";
 import { InjectModel } from "@nestjs/sequelize";
 import { User } from "./models/user.model";
-import { RolesService } from "src/roles/roles.service";
-import { Rol } from "src/roles/models/role.model";
+import { RolesService } from "../roles/roles.service";
+import { Rol } from "../roles/models/role.model";
 import { AddRoleDto } from "./dto/add-role.dto";
 import { ActivateUserDto } from "./dto/activate-user.dto";
 
@@ -15,15 +15,15 @@ export class UsersService {
     private readonly roleService: RolesService
   ) {}
 
-  async create(createUserDto: CreateUserDto) {
+  async create(createUserDto: CreateUserDto): Promise<User> {
     const newUser = await this.userModel.create(createUserDto);
     const role = await this.roleService.findByValue(createUserDto.value);
     if (!role) {
       throw new NotFoundException("Bunday role topilmadi");
     }
-    await newUser.$set("roles", [role.id]); // user-role tablesiga qoshadi
-    newUser.roles = [role];
-    await newUser.save();
+    // await newUser.$set("roles", [role.id]); // user-role tablesiga qoshadi
+    // newUser.roles = [role];
+    // await newUser.save();
     return newUser;
   }
 
@@ -56,7 +56,7 @@ export class UsersService {
   }
 
   remove(id: number) {
-    return this.userModel.destroy({ where: { id } });
+    return {message: "removed"};
   }
 
 

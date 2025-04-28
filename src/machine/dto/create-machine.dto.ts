@@ -1,5 +1,5 @@
 export class CreateMachineDto {
-    model: string;
-    name: string;
-    companyId: number;
+  model: string;
+  name: string;
+  companyId: number;
 }

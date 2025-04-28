@@ -3,7 +3,7 @@ import { CreateBuilderDto } from './dto/create-builder.dto';
 import { UpdateBuilderDto } from './dto/update-builder.dto';
 import { Builder } from './models/builder.model';
 import { InjectModel } from '@nestjs/sequelize';
-import { CompanyService } from 'src/company/company.service';
+import { CompanyService } from '../company/company.service';
 import { BadRequestException } from '@nestjs/common';
 
 @Injectable()
